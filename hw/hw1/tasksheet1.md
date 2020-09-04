@@ -48,5 +48,4 @@ These systems are nice since they have a check-in process for developers. With T
 #### Links to Sources or Software Manual Pages
 [Top 10 VCS](https://hackernoon.com/top-10-version-control-systems-4d314cf7adea)
 
-
 [Microsoft TFS(team foundation server)](https://azure.microsoft.com/en-us/services/devops/server/)
