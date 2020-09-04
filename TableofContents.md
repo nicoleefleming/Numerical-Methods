@@ -1,6 +1,6 @@
 # Table of Contents
 
-[Homework 1](https://github.com/nicoleefleming/math4610/tree/master/hw/hw1)
+1. [Homework 1](https://github.com/nicoleefleming/math4610/blob/master/hw/hw1/tasksheet1.md)
 
 
 ## Software Manual
