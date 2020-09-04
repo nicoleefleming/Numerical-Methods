@@ -46,5 +46,7 @@ Write a brief paragraph (3 or 4 sentences) that describe your findings. Include 
 There are many. A few of the prominant ones I have used are Microsoft TFS, PostgreSQL, Github and AWS CodeCommit. 
 These systems are nice since they have a check-in process for developers. With TFS there is a check in, and a review process before the code is updated.
 #### Links to Sources or Software Manual Pages
-[Top 10 VCS](https://hackernoon.com/top-10-version-control-systems-4d314cf7adea]
+[Top 10 VCS](https://hackernoon.com/top-10-version-control-systems-4d314cf7adea)
+
+
 [Microsoft TFS(team foundation server)](https://azure.microsoft.com/en-us/services/devops/server/)
