@@ -14,9 +14,12 @@ None for this task.
 Email a link to your Github page. They should be of the form https://username.github.io.
 
 #### Response 
- I emailed the link, and I also included the link below. My home was of the form: https://github.com/username
+ I emailed the link, and I also included the link below. I just published an updated page. 
+ 
+ url copy/paste link: https://nicoleefleming.github.io
+ 
 #### Links to Sources or Software Manual Pages
-[Github home](https://github.com/nicoleefleming)
+[Github home](https://nicoleefleming.github.io)
 
 ### Task 3
 Create a Repository labeled exactly: math4610 and add your instructor as a collaborator. Make sure to make the repository private.
