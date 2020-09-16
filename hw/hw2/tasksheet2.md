@@ -65,17 +65,16 @@ Now for something completely different - write out the
 ## Task 5
 Determine the order of accuracy of the central difference
     approximation of the second derivative. That is, analyze the approximation
-    \[
-      f''(x) \approx {{f(x+h) - 2 f(x) + f(x-h)}\over{h}}
-    \]
+    
+         f''(x) ~= (f(x+h) - 2 f(x) + f(x-h))/(h^2)
+    
     via Taylor series expansions. Write a code that approximates the second
     derivative of the function
-    \[
+   
          f(x) = cos(x)
-    \] 
-    at the point, \(x=2.0\). Use, \(h=1.0,0.5,0.1,0.01,0.001,\ldots,10^{-16}\).
-    Create a table of
-    difference values between the "exact" value of the second derivative.
+    
+    at the point, x=2.0. Use, h=1.0,0.5,0.1,0.01,0.001,. . . .,10^{-16}\).
+    Create a table of difference values between the "exact" value of the second derivative.
 ### Response
 
 
