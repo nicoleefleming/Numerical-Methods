@@ -8,10 +8,27 @@ you write. Use a suitable response for the Python line "...it's only a
 bunny..."
 ### Response
 
+I wrote the following code to inform of the language I will be using for this course. 
+    
+    public class main {
+        public static void main(String args[])
+        {
+            //TASKSHEET 2 Task 1 -- state which language you will be using by printing to the console.
+            System.out.println("Brother Maynard, get me the holy hand grenade!");
+            System.out.println("I will be using Java for the bulk of the coding projects, but for plotting I will use python's graphing capabilities.");
 
+
+        }
+
+    }
+
+I did not create a Software Manual Page for this code, since I was just printing to the console. If there needs to be a manual page, I will wait to be informed before adding it in. However, the link to the actual code is included below.
 
 ### Sources or links
-[]()
+The link will be made active when the code for Task 5 is completed. 
+[Source Code]() 
+
+is marked by comments for Task 1 and Task 5.
 
 ## Task 2
 Edit the main README.md file in your Math 4610 repository
@@ -90,8 +107,14 @@ Search the internet for information regarding finite
     describe your findings. Include links to the sites you cite.
 
 ### Response
-
+I found papers written about the Elliptic ODE aprroximation. I was more fascinated with the applications of this and the applications of the non-constant difference approximations. I found that you can model plasma waves with the Elliptic. I found that the non-constant form of this difference approximation models flux. Some others that I found were: with focus in math, theres the forward difference, central difference and backwards difference approximations. The biggest application that comes to my mind is in machine learning, with the search engines. 
 
 
 ### Sources or links
-[]()
+[Mathematics of Machine Learning (Chapter 5)](https://mml-book.github.io/book/mml-book.pdf)   
+
+[Plasma Wave Modeling-Japanese](https://www.jstage.jst.go.jp/article/jpsj/74/5/74_5_1431/_article/-char/ja/)   
+
+[Math Stack Exchange Discussion](https://math.stackexchange.com/questions/1509291/numerical-solution-of-non-constant-coefficient-diffusion-equation-via-finite-dif)   
+
+For a more information on flux I googled flux and read the definition that resulted.
