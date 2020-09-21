@@ -73,8 +73,13 @@ Now for something completely different - write out the
     analysis for the centered difference approximation in a Taylor series
     expansions. Show that the approximation is second order.
 ### Response
+I have a link to the pdf in case the embedded file does not display that I included below. 
 
-
+<object data="https://github.com/nicoleefleming/math4610/blob/master/hw/hw2/Untitled-Artwork.pdf" type="application/pdf" width="700px" height="700px">
+    <embed src="https://github.com/nicoleefleming/math4610/blob/master/hw/hw2/Untitled-Artwork.pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://github.com/nicoleefleming/math4610/blob/master/hw/hw2/Untitled-Artwork.pdf">Download PDF</a>.</p>
+    </embed>
+</object>
 
 ### Sources or links
 []()
