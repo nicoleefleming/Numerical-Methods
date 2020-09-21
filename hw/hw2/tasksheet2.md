@@ -75,6 +75,8 @@ Now for something completely different - write out the
 ### Response
 I have a link to the pdf in case the embedded file does not display that I included below. 
 
+The HTML markdown is not working in Chrome, or Safari. I have not tested in Firefox or IE, but the link works.
+
 
 <object data="https://github.com/nicoleefleming/math4610/blob/master/hw/hw2/Untitled-Artwork.pdf" type="application/pdf" width="700px" height="700px"> 
     <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://github.com/nicoleefleming/math4610/blob/master/hw/hw2/Untitled-Artwork.pdf">Download PDF</a>.
