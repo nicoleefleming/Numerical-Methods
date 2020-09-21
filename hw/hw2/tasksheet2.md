@@ -75,11 +75,14 @@ Now for something completely different - write out the
 ### Response
 I have a link to the pdf in case the embedded file does not display that I included below. 
 
-<object data="https://github.com/nicoleefleming/math4610/blob/master/hw/hw2/Untitled-Artwork.pdf" type="pdf" width="700px" height="700px">
-    <embed src="https://github.com/nicoleefleming/math4610/blob/master/hw/hw2/Untitled-Artwork.pdf" type="application/pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://github.com/nicoleefleming/math4610/blob/master/hw/hw2/Untitled-Artwork.pdf">Download PDF</a>.</p>
-    </embed>
+
+<object data="https://github.com/nicoleefleming/math4610/blob/master/hw/hw2/Untitled-Artwork.pdf" type="application/pdf" width="700px" height="700px"> 
+    <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://github.com/nicoleefleming/math4610/blob/master/hw/hw2/Untitled-Artwork.pdf">Download PDF</a>.
+        </p>
 </object>
+    
+        
+
 
 ### Sources or links
 [HandWork pdf](https://github.com/nicoleefleming/math4610/blob/master/hw/hw2/Untitled-Artwork.pdf)
