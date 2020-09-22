@@ -8,7 +8,11 @@ you write. Use a suitable response for the Python line "...it's only a
 bunny..."
 ### Response
 
-I wrote the following code to inform of the language I will be using for this course. 
+I wrote the following code to inform of the language I will be using for this course. I will use Java with use of gradle to run from the command line. 
+
+
+
+If needed I will plot in python, and if there is any parallel programming needed at a faster/lower level, I will use c++
     
     public class main {
         public static void main(String args[])
