@@ -112,8 +112,10 @@ I wrote code to solve and print the values for this function, following the form
 as well as the Software Manual page for the working function. I do have two functions I wrote in the source code, but the printToFile function is not functioning properly.
 I will also link to the text file with the outputs, as the embedded files aren't consistently showing up as functioning files. 
 
+![](image.PNG)
+
 ### Sources or links
-[Taylor Series Expansion Code](https://github.com/nicoleefleming/math4610/blob/master/math4610Code/src/main/java/test.java)
+[Taylor Series Approximation Code](https://github.com/nicoleefleming/math4610/blob/master/math4610Code/src/main/java/test.java)
 
 [output File](https://github.com/nicoleefleming/math4610/blob/master/math4610Code/src/main/java/output.txt.txt)
 #### Software Manual Page Links
