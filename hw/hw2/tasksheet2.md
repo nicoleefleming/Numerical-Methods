@@ -108,10 +108,16 @@ Determine the order of accuracy of the central difference
     Create a table of difference values between the "exact" value of the second derivative.
 ### Response
 
-
+I wrote code to solve and print the values for this function, following the format in the lecture notes. I have attatched the link to the code and text file, 
+as well as the Software Manual page for the working function. I do have two functions I wrote in the source code, but the printToFile function is not functioning properly.
+I will also link to the text file with the outputs, as the embedded files aren't consistently showing up as functioning files. 
 
 ### Sources or links
-[]()
+[Taylor Series Expansion Code](https://github.com/nicoleefleming/math4610/blob/master/math4610Code/src/main/java/test.java)
+
+[output File](https://github.com/nicoleefleming/math4610/blob/master/math4610Code/src/main/java/output.txt.txt)
+#### Software Manual Page Links
+[TseriesApprox]()
 
 ## Task 6
 Search the internet for information regarding finite
