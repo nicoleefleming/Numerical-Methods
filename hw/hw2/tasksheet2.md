@@ -119,7 +119,9 @@ I will also link to the text file with the outputs, as the embedded files aren't
 
 [output File](https://github.com/nicoleefleming/math4610/blob/master/math4610Code/src/main/java/output.txt.txt)
 #### Software Manual Page Links
-[TseriesApprox]()
+[TseriesApprox](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/TseriesApprox.md)
+
+printToFile
 
 ## Task 6
 Search the internet for information regarding finite
