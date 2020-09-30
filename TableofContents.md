@@ -5,4 +5,4 @@
 3. [Homework 3](https://github.com/nicoleefleming/math4610/blob/master/hw/hw3/hw3.md)
 
 ## Software Manual
-[Table of Contents]()
+[Table of Contents](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/TableofContents.md)
