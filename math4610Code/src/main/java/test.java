@@ -4,20 +4,25 @@ import java.io.IOException;
 
 import static java.lang.Math.cos;
 
+
 public class test {
 
     double[] error = new double[19];
     public static void main(String args[])
     {
+        precision myprec = new precision();
         test myTest = new test();
-        double hold;
+        /*
+        //double hold;
         //TASKSHEET 2 Task 1 -- state which language you will be using by printing to the console.
-        System.out.println("Brother Maynard, get me the holy hand grenade!");
-        System.out.println("I will be using Java for the bulk of the coding projects, but for plotting I will use python's graphing capabilities.");
+        //System.out.println("Brother Maynard, get me the holy hand grenade!");
+        //System.out.println("I will be using Java for the bulk of the coding projects, but for plotting I will use python's graphing capabilities.");
 
 
         //TASKSHEET 2 Task 5 -- code to solve the Taylor Series Expansion for an f(x) with a given h
         //Initialize h
+        double[] sol = new double[19];
+
         double[] h = new double[19];
         for (int i = 0; i < 19; i++)
         {
@@ -39,10 +44,23 @@ public class test {
             }
         }
 
-        myTest.TseriesApprox(h);
+        sol = myTest.TseriesApprox(h);
+        for(int i = 0; i < sol.length; i++)
+            System.out.println(sol[i]);
+
         System.out.println("\n Values of h: \n");
         for(int i = 0; i < h.length; i++)
             System.out.println(h[i]);
+        */
+
+        //Tasksheet 3 task 3
+        double sineps = 0.0;
+        sineps = myprec.smaceps();
+        System.out.println("The single machine precision: " + sineps + "\n" );
+
+        double doueps = 0.0;
+        doueps = myprec.dmaceps();
+        System.out.println("The double machine precision: " + doueps + "\n");
 
     }
 
@@ -85,7 +103,7 @@ public class test {
     //TASKSHEET 2 Task 5 -- print results to file: h, approx, error
     public void PrintNumToFile(double[] h, double[] approx)
     {
-        //TODO DEBUG this function. I am not sure why it is not working correctly. 
+        //TODO DEBUG this function. I am not sure why it is not working correctly.
 
         try {
 
