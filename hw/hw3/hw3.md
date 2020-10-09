@@ -21,7 +21,9 @@ This plotting code is written in python.
 
 This is the log-log plot like the one in the lecture with the first derivative as the plot.
 
-![](plot-sin.PNG)
+[link to graph](https://github.com/nicoleefleming/math4610/blob/master/hw/hw3/plot-sin.png)
+
+![](plot-sin.png)
 
 In the -sin log =-log plot, it is easy to see the decrease at a rate of h^2. In the cos log log plot, it is not intuitive to see what is needed to be seen. 
 
@@ -30,7 +32,10 @@ The error shows that the approximation is second order accurate in the decrecrea
 
 The plot is shown below. This is the second derivative -cos(2.0)'s log-log plot. 
 
-![](plot.PNG)
+![](plot.png)
+
+[link to graph](https://github.com/nicoleefleming/math4610/blob/master/hw/hw3/plot.png)
+
 I graphed the -cos, but it doesn't make as much sense since the graph is just the reversed log-log plot of the original function. This is why the information is taken from the other log-log plot. 
 
 ### Sources or links
