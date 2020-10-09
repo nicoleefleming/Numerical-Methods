@@ -67,6 +67,7 @@ Output from the lines above where dimensions are equal to 18, sol is the initial
     {
         double[] diff = new double[19];
         double[] err = new double[19];
+        double exactvsact;
         err = error;
 
         double x = 2.0;
@@ -77,6 +78,8 @@ Output from the lines above where dimensions are equal to 18, sol is the initial
             diff[i] = (cos(x + h[i]) - 2* cos(x) + cos(x-h[i]))/(h[i]*h[i]);
         }
 
+
+        exactvsact = cos(2.0);
         System.out.println("\n Values of the approximation: \n");
         for(int i = 0; i < diff.length; i++)
             System.out.println(diff[i]);
@@ -89,10 +92,12 @@ Output from the lines above where dimensions are equal to 18, sol is the initial
             err[i] = ((0.0833333333)*(Math.pow(h[i], 2)))*(diff[i]);
         }
 
+
         System.out.println("\n Values of the error: \n");
         for(int i = 0; i < err.length; i++)
             System.out.println(err[i]);
 
+        difference = exactvsact;
         error = err;
         //return approximation
         return diff;
