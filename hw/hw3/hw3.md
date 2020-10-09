@@ -3,15 +3,29 @@
 ## Task 1
 Computationally verify that the central difference approximation for the second derivative approximation defined in Task Sheet 2, Task 5 is actually second order accurate. Using values of h≠0, compute the approximation and the difference between the exact value and the approximation. Print out the data in columns like those presented in the notes for the first order approximation of the the first derivative.
 ### Response
+Okay. On the Homework 2 Tasksheet I verified that the approximation was second order accurate. The error is computed, and the value h is never 0. *Will check with Koebbe on Friday that this is the same question...
 
+Here is the Handwork:
+<object data="https://github.com/nicoleefleming/math4610/blob/master/hw/hw2/Untitled-Artwork.pdf" type="application/pdf" width="700px" height="700px"> 
+    <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://github.com/nicoleefleming/math4610/blob/master/hw/hw2/Untitled-Artwork.pdf">Download PDF</a>.
+        </p>
+</object>
+    
 
+Here are the columns outputted by the code:
 
+I wrote code to solve and print the values for this function, following the format in the lecture notes. I have attatched the link to the code and text file, 
+as well as the Software Manual page for the working function. I do have two functions I wrote in the source code.
+
+![](image.PNG)
 
 
 ### Sources or links
- 
-[]() 
+[HandWork pdf](https://github.com/nicoleefleming/math4610/blob/master/hw/hw2/Untitled-Artwork.pdf)
 
+[Taylor Series Approximation Source Code](https://github.com/nicoleefleming/math4610/blob/master/math4610Code/src/main/java/test.java)
+
+[TseriesApprox](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/TseriesApprox.md)
 
 
 ## Task 2
@@ -26,11 +40,82 @@ h>0. Also, determine when the approximation begins to fail due to finite precisi
 ## Task 3
 Write routines that will produce the machine epsilon as discussed in class. Write two separate routines, one for the single precision setting on your computer and one for double precision. Compile and test each of of these routines separately. This means writing a main() program in separate files.
 ### Response
+The single machine precision code is as follows:
+
+    public float smaceps()
+    {
+        //initialize and declare variables.
+        float approx = 0;
+        //initialize x1 to 1, and seps to 1
+        float x1 = 1;
+        float seps = 1;
+        //set approx = x1 + seps
+        approx = x1 + seps;
+        //declare an iteration variable
+        int iters = 0;
+
+        while(approx != 1)
+        {
+            //update seps, divide it by two each iteration to get closer to seps = 0
+            seps = seps/2;
+            //update the approximation
+            approx = x1 + seps;
+            //increment the iteration counter
+            iters = iters + 1;
+            //when approx is equal to 1, or close enough to 1 that the
+            // computer can't track the small number, exit loop
+        }
+
+        System.out.println("The single precision iterations: " + iters + "\n");
+        return seps;
+     }
+
+The double machine precision code is as follows:
+
+    public double dmaceps()
+    {
+        //initialize and declare variables.
+        double approx = 2.0;
+        //initialize x1 to 1, and seps to 1
+        double x1 = 1.0;
+        double deps = 1.0;
+        //set approx = x1 + seps
+        //approx = x1 + seps;
+        //declare an iteration variable
+        int iters = 0;
+
+        while(approx != 1)
+        {
+            //update seps, divide it by two each iteration to get closer to seps = 0
+            deps = deps/2.0;
+            //update the approximation
+            approx = x1 + deps;
+            //increment the iteration counter
+            iters = iters + 1;
+            //when approx is equal to 1, or close enough to 1 that the
+            // computer can't track the small number, exit loop
+        }
+
+        System.out.println("The single precision iterations: " + iters + "\n");
+        return deps;
+     }
+
+The results for single machine precision: 
+     
+     Iterations:  24
+     Epsilon:     5.9604644775390625E-8
+     
+The results for double machine precision:
+     
+     Iterations:  53
+     Epsilon:     1.1102230246251565E-16
+
+Both of these methods are part of the class precision.java. This will be added into the .jar file created in Task 5.
 
 ### Sources or links
-[]()
+[Single Machine Precision - smaceps](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/smaceps.md)
 
-[]()
+[Double Machine Precision - dmaceps](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/dmaceps.md)
 
 ## Task 4
 In this task you will be asked to begin a software manual for the various routines that you will be creating over the semester. The software manual will span the entire semester and should include a lot of your work. The following steps should help organize your work.
@@ -109,7 +194,9 @@ Make the library a random access library.
 This last step allows a link/load command to access the routines in any order.
 
 ### Response
+(10/7) I am in the process of creating a .jar file. However, currently in my .gitignore file I have excluded it from being uploaded. I can upload it manually if needed for this task. 
 
+I will upload a version of the .jar file after the next tasksheet to keep a current running version available here. For this tasksheet, I will create it, and I will add the java class ( precision.java with smaceps and dmaceps) to it. 
 
 
 ### Sources or links
