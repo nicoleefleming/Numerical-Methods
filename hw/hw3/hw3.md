@@ -3,25 +3,38 @@
 ## Task 1
 Computationally verify that the central difference approximation for the second derivative approximation defined in Task Sheet 2, Task 5 is actually second order accurate. Using values of h≠0, compute the approximation and the difference between the exact value and the approximation. Print out the data in columns like those presented in the notes for the first order approximation of the the first derivative.
 ### Response
+Here is the error that was calculated based on the approximation done in Tasksheet 2 Task 5. 
 
+![](image.PNG)
 
-
+The error is decreasing by approximately h^2 each time it is calculated, until overflow occurs. Then the value resets to 0. As h decreases so does the error. 
 ### Sources or links
-[]()
-
-[]()
-
-[]()
+[TseriesApprox](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/TseriesApprox.md)
 
 
 ## Task 2
 Produce a log-log plot of the error from the data in Task 1. Discuss how the results show that the approximation is second order accurate over a range of value where 
 h>0. Also, determine when the approximation begins to fail due to finite precision in the number representation and/or finite precision of arithmetic. You will need to write a code that produces the plot. If needed, you can use the Python code in the notes
 ### Response
+I used the code in the lecture notes to base this log-log plot off of. I do have other plotting code for other graphs that may be required in the future as well. 
+This plotting code is written in python. 
 
+This is the log-log plot like the one in the lecture with the first derivative as the plot.
+
+![](plot-sin.PNG)
+
+In the -sin log =-log plot, it is easy to see the decrease at a rate of h^2. In the cos log log plot, it is not intuitive to see what is needed to be seen. 
+
+The error shows that the approximation is second order accurate in the decrecrease rate (or the slope of the line) is about double what the value of h is. The error starts to fail around the 17th iteration of h, due to the machine roundoff error in my machine which happens where the accruacy of the calculations exceed 5E-16. This is where the graph starts to rise, since there is overflow. 
+
+
+The plot is shown below. This is the second derivative -cos(2.0)'s log-log plot. 
+
+![](plot.PNG)
+I graphed the -cos, but it doesn't make as much sense since the graph is just the reversed log-log plot of the original function. This is why the information is taken from the other log-log plot. 
 
 ### Sources or links
-[]()
+[log-log plot code](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/dmaceps.md)
 
 ## Task 3
 Write routines that will produce the machine epsilon as discussed in class. Write two separate routines, one for the single precision setting on your computer and one for double precision. Compile and test each of of these routines separately. This means writing a main() program in separate files.
@@ -180,7 +193,7 @@ Make the library a random access library.
 This last step allows a link/load command to access the routines in any order.
 
 ### Response
-(10/7) I am in the process of creating a .jar file. However, currently in my .gitignore file I have excluded it from being uploaded. I can upload it manually if needed for this task. 
+(10/9) I am in the process of creating a .jar file. However, currently in my .gitignore file I have excluded it from being uploaded. I can upload it manually if needed for this task. 
 
 I will upload a version of the .jar file after the next tasksheet to keep a current running version available here. For this tasksheet, I will create it, and I will add the java class ( precision.java with smaceps and dmaceps) to it. 
 
