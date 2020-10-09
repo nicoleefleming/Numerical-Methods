@@ -3,29 +3,15 @@
 ## Task 1
 Computationally verify that the central difference approximation for the second derivative approximation defined in Task Sheet 2, Task 5 is actually second order accurate. Using values of h≠0, compute the approximation and the difference between the exact value and the approximation. Print out the data in columns like those presented in the notes for the first order approximation of the the first derivative.
 ### Response
-Okay. On the Homework 2 Tasksheet I verified that the approximation was second order accurate. The error is computed, and the value h is never 0. *Will check with Koebbe on Friday that this is the same question...
 
-Here is the Handwork:
-<object data="https://github.com/nicoleefleming/math4610/blob/master/hw/hw2/Untitled-Artwork.pdf" type="application/pdf" width="700px" height="700px"> 
-    <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://github.com/nicoleefleming/math4610/blob/master/hw/hw2/Untitled-Artwork.pdf">Download PDF</a>.
-        </p>
-</object>
-    
-
-Here are the columns outputted by the code:
-
-I wrote code to solve and print the values for this function, following the format in the lecture notes. I have attatched the link to the code and text file, 
-as well as the Software Manual page for the working function. I do have two functions I wrote in the source code.
-
-![](image.PNG)
 
 
 ### Sources or links
-[HandWork pdf](https://github.com/nicoleefleming/math4610/blob/master/hw/hw2/Untitled-Artwork.pdf)
+[]()
 
-[Taylor Series Approximation Source Code](https://github.com/nicoleefleming/math4610/blob/master/math4610Code/src/main/java/test.java)
+[]()
 
-[TseriesApprox](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/TseriesApprox.md)
+[]()
 
 
 ## Task 2
