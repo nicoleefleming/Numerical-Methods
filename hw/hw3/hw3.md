@@ -197,18 +197,15 @@ Make the library a random access library.
                 
 This last step allows a link/load command to access the routines in any order.
 
-### Response
-(10/9) I am in the process of creating a .jar file. However, currently in my .gitignore file I have excluded it from being uploaded. I can upload it manually if needed for this task. 
-
-I will upload a version of the .jar file after the next tasksheet to keep a current running version available here. For this tasksheet, I will create it, and I will add the java class ( precision.java with smaceps and dmaceps) to it. 
+### Response 
+I have created the jar file. It contains precision.java thus far. I will update the manifest file as I add more items to the library. 
+Currently it is seperate from my code, but if it needs to be in the src folder that will be updated locally, but due to the .gitignore it will not be pushed each time the code is pushed. I will update it manually after additions of full _.java files are made to it.  
 
 
 ### Sources or links
-[]()
+[To view jar file](https://github.com/nicoleefleming/math4610)
 
-[]()
-#### Software Manual Page Links
-[]()
+The file is not manifesting in Github, so, I will keep it updated, but I will put it into use on my local machine, and if it is not a valid file when pulling, I am willing to send a .zip file containing this file.
 
 ## Task 6
 Search the internet for discussions of shared libraries. Write a brief summary of what you find including the pros and cons of shared libraries. Your write up should be a brief paragraph (3 or 4 sentences) that describe your findings. Include links to the sites you cite.
