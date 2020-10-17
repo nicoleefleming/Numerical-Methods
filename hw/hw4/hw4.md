@@ -7,9 +7,13 @@ Write two separate routines. The routines should be documented in your software 
 ### Solution
 
 ### Sources and Software Manual Pages
-[]()
+[abserr Software Manual Page]()
 
-[]()
+[relerr Software Manual Page]()
+
+[abserr code]()
+
+[relerr code]()
 
 ## Task 2
 Create a graphics routine that will create a 2D plot of data that includes the following.
@@ -26,9 +30,9 @@ If you are working mostly in Python you can choose to include the module in your
 ### Solution
 
 ### Sources and Software Manual Pages
-[]()
+[2DPlots Software Manual Page]()
 
-[]()
+[2DPlots code]()
 
 ## Task 3
 Write a routine that will approximate the location of a root using fixed point iteration or functional iteration using the fixed point algorithm. That is, if x∗ is a root of the function, 
@@ -41,7 +45,9 @@ Make sure you put in an appropriate stopping criteria. Include documentation for
 ### Solution
 
 ### Sources and Software Manual Pages
+[fixedPtIter Software Manual Page]()
 
+[fixedPtIter code]()
 
 ## Task 4
 Apply a fixed point iteration to finding the closest root to zero of the following function.
@@ -56,6 +62,7 @@ Apply a fixed point iteration to finding the closest root to zero of the followi
 ### Solution
 
 ### Sources and Software Manual Pages
+[fixedPtIter Software Manual Page]()
 
 ## Task 5
 Write a routine/code to implement the Bisection method for approximating the location of a root of a function of one variable. Write the code to incorporate 
@@ -64,12 +71,22 @@ the computation of the number of steps to meet a given tolerance instead of the 
 ### Solution
 
 ### Sources and Software Manual Pages
+[bisection Software Manual Page]()
 
+[bisection code]()
 
 ## Task 6
 Search the internet for sites that discuss root finding problems in practice. Write a brief summary of what you find including the pros and cons of shared libraries. 
 Your write up should be a brief paragraph (3 or 4 sentences) that describe your findings. Include links to the sites you cite.
 
 ### Solution
+In Machine Learning practices, real roots of polynomials are useful in helping the machine to learn at a specific rate, in the neural network that they operate on or in. 
+With the use of mathematical theroems to back an alogorithm, the weights and biases in a given path in a neural network are easier to calculate, and the roots aid in guiding the machine to the shortest and/or best route for the answer. The efficiency of the math and root finding methods directly impact the speed and rate the machine computes the outcome. An example is Google's predicitive searches, when one is logged into a Google account, these can become more geared to that individual but can also remain broad. 
+
 
 ### Sources
+[Machine Learning and Real Roots of Polynomials](https://www.math.ucdavis.edu/files/1415/5249/2664/thesis-ZekaiZhao-Final.pdf)
+
+[The 5 Myths of Advanced Analytics](https://www.tibco.com/resources/whitepaper/5-myths-advanced-analytics?lp=y&utm_medium=cpc&utm_source=google&utm_content=s&utm_campaign=ggl_s_nam_en_DS_nonbrand_beta&utm_term=%2Bmachine%20%2Blearning&_bt=391695114200&_bm=b&_bn=g&gclid=CjwKCAjwrKr8BRB_EiwA7eFapmAATYf1YFEc6_P4HWWWNnCBdRU2YYgJcLmYA2qFSh0cA5rjkZW1ohoCtEsQAvD_BwE)
+
+[Exploration of Machine learning for Polynomial Root Finding](https://www.researchgate.net/publication/331101795_Exploration_of_Machine_learning_for_Polynomial_Root_Finding_Motivation)
