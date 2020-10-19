@@ -170,7 +170,7 @@ This is the function g'(x):
             
             
 ### Sources and Software Manual Pages
-[fixedPtIter Software Manual Page]()
+[fixedPtIter Software Manual Page](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/fixedPtIter.md)
 
 [fixedPtIter code]()
 
@@ -221,7 +221,7 @@ This gives the result:
 I am not sure why the algorithm is not converging to finding the root. But it isn't. I plan to look into it a bit more, and see if I can find the bug. But for now, this is the answer I have for this problem.
 
 ### Sources and Software Manual Pages
-[fixedPtIter Software Manual Page]()
+[fixedPtIter Software Manual Page](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/fixedPtIter.md)
 
 [fixedPtIter code]()
 ## Task 5
@@ -300,7 +300,7 @@ The solution to the test problem for one root of f(x) = x-3 was:
             
             
 ### Sources and Software Manual Pages
-[bisection Software Manual Page]()
+[bisection Software Manual Page](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/bisection.md)
 
 [bisection code]()
 
