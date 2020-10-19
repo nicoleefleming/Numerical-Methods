@@ -8,3 +8,10 @@
 ## Plotting Methods
 1. [log-logplot](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/log-logplot.md)
 2. [plotMany](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/plotMany.md)
+
+## Root Finding Methods
+1. [fixedPtIter](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/fixedPtIter.md)
+2. [bisection](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/bisection.md)
+
+
+
