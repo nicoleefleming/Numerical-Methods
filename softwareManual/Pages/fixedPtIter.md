@@ -54,7 +54,7 @@ Output is:
 
 
 
-**Implementation/Code:** The following is the code for TseriesApprox
+**Implementation/Code:** 
 
      public double fixedPtIter(double approx, double tolerance, int maxIters) 
      {
