@@ -16,7 +16,7 @@ will produce in running the program in both sources. If one does not have the gr
     "FILE-PATH" src/test/*.java -d classes
     "FILE-PATH" -cp classes test.java error.java
     
-where the method belonds to the class precision. These commands should also work.
+where the method belonds to the class error. These commands should also work.
 
 **Description/Purpose:** This routine will compute the  absolute error for an input x and y in Java.
 
