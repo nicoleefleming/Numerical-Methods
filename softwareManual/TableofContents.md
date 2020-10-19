@@ -7,4 +7,4 @@
 
 ## Plotting Methods
 1. [log-logplot](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/log-logplot.md)
-2. [4610TS4 - plot many on one 2d plot](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/4610TS4.md)
+2. [plotMany](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/4610TS4.md)
