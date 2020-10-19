@@ -104,7 +104,71 @@ Write a routine that will approximate the location of a root using fixed point i
 Make sure you put in an appropriate stopping criteria. Include documentation for the code in your software manual and add the routine to your shared archive.
 
 ### Solution
+I have the following code which I used for the Fixed Point Iteration problem. 
 
+        public double fixedPtIter(double approx, double tolerance, int maxIters) {
+        double p, p0, tol;
+        int no;
+        double val = 0.0;
+        int i = 1;
+        double error = 10.0 * tolerance;
+        double maxLimit = maxIters;
+        //Approximate p
+        p0 = approx;
+
+        //Desired Tolerance
+        tol = tolerance;
+
+        //Maximum Iterations
+        no = maxIters;
+
+        while(i <= no) {
+            //find the starting value of the function
+            p = g(p0);
+
+            if (Math.abs(p - p0) < tol)
+                break;
+
+            //Assign the current value of p to val, the returning value.
+            val = p;
+
+            //Print out the current iteration, and the current value of p to console
+            System.out.printf("Iteration %d: Current value %f\n", i, p);
+
+            //reset p0
+            p0 = p;
+            //increment i
+            i = i+1;
+
+            //check the error vs the tolerance
+            error = Math.abs(f2(p0))*error;
+            if(error > g(p0))
+            {
+                break;
+            }
+            
+            //If this is not here, it will iterate all 100 times. I haven't stepped through enough to 
+            //completely debug this case. But for the specific example f(x) = xe^3x^2, this gets the last guess before Infinity.
+            if(val >= 15){
+                break;
+            }
+        }
+        //return last value
+        return val;
+    }
+
+This is the function g(x):
+
+     double g(double x){
+        return x*Math.exp(Math.pow(3*x,2));
+    }
+This is the function g'(x):
+
+    double f2(double x){
+        return Math.exp(3*x*x) + 6*x*x*Math.exp(3*x*x);
+    }
+            
+            
 ### Sources and Software Manual Pages
 [fixedPtIter Software Manual Page]()
 
@@ -121,6 +185,40 @@ Apply a fixed point iteration to finding the closest root to zero of the followi
       ϵ is chosen to get convergence of the sequence of approximations. You can to this by applying the convergence criterion for fixed point iteration.
 
 ### Solution
+The solution to this problem was solved by updating g and f2 to the following:
+
+     double g(double x){
+        return x*Math.exp(Math.pow(3*x,2));
+    }
+
+    double f2(double x){
+        return Math.exp(3*x*x) + 6*x*x*Math.exp(3*x*x);
+    }     
+
+This gives the result:
+
+            Fixed Point finds the root to be: 15.43346927633706
+            
+ When using the idea of x = x − ϵ*f(x)
+ 
+ The equation is found to be convergent and with epsilon = 1, epsilon = 0.5
+ 
+            Iteration 1: Current value 0.286666
+            Iteration 2: Current value 0.600590
+            Iteration 3: Current value 15.433469
+            Fixed Point finds the root to be: 15.43346927633706
+
+            Iteration 1: Current value 0.109417
+            Iteration 2: Current value 0.121866
+            Iteration 3: Current value 0.139293
+            Iteration 4: Current value 0.165870
+            Iteration 5: Current value 0.212474
+            Iteration 6: Current value 0.318980
+            Iteration 7: Current value 0.797004
+            Iteration 8: Current value 242.266565
+            Fixed Point finds the root to be: 242.2665654803746
+            
+I am not sure why the algorithm is not converging to finding the root. But it isn't. I plan to look into it a bit more, and see if I can find the bug. But for now, this is the answer I have for this problem.
 
 ### Sources and Software Manual Pages
 [fixedPtIter Software Manual Page]()
@@ -136,7 +234,7 @@ I wrote the following code that incorporates a number of steps to get to a toler
     public double f(double x)
     {
         //function formula here
-        double f = (x - 3);
+        double f = x*Math.exp(Math.pow(3*x,2));//(x - 3);
 
         return f;
     }
@@ -194,7 +292,11 @@ I then tested my code with the following inline code:
 
 The solution to the test problem for one root of f(x) = x-3 was:
 
+            for f=x-3
             Bisection finds the root to be: 3.000001907348633
+            
+            for f=xe^3x^2
+            Bisection finds the root to be: 9.999990463256836
             
             
 ### Sources and Software Manual Pages
