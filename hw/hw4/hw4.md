@@ -28,11 +28,54 @@ Create a graphics routine that will create a 2D plot of data that includes the f
 If you are working mostly in Python you can choose to include the module in your archive. If you are not coding primarily in Python, you should make sure you document this in your software manual as an extra code.
 
 ### Solution
+I worked with a string list inputted by the user. The stop, start and step size is hardcoded, but could be easily altered to be user defined at run time as well. I found that putting the call to the plot2D function worked better with looping over the arguements rather than trying to loop in the plot2D function. The code is shown here:
+
+            import matplotlib.pyplot as mpl
+            import numpy as np
+
+            def plot2D(*args):
+                  mpl.grid(1)
+                  xAxis = np.arange(args[1],args[2],args[3])
+
+            def xfunction(x,input):
+                  return eval(input)
+            print(xfunction(5,args[0]))
+            mpl.plot(xAxis, xfunction(xAxis, args[0]), label=args[0])
+            mpl.xlabel("Values of input X")
+            mpl.ylabel("Values of Output Y")
+
+
+            # creating an empty list
+            lst = []
+
+            # number of elemetns as input
+            n = int(input("Enter number of elements : "))
+            
+            # iterating till the range
+            for i in range(0, n):
+                ele = str(input())
+                lst.append(ele)  # adding the element
+            print(lst)
+            
+            n = len(lst)
+            
+            for a in range(0, n):
+                  i = a
+                  plot2D(lst[i], -10, 10, 1)
+            mpl.legend(loc="upper left")
+            mpl.show()
+
+The results from the user defined inputs:
+            'Enter number of elements:' 2
+                                        x
+                                        2*x
+                                        
+![](explot.png)
 
 ### Sources and Software Manual Pages
-[2DPlots Software Manual Page]()
+[2DPlots Software Manual Page](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/plotMany.md)
 
-[2DPlots code]()
+[2DPlots code](https://github.com/nicoleefleming/math4610/blob/master/PythonCode/plotMany.py)
 
 ## Task 3
 Write a routine that will approximate the location of a root using fixed point iteration or functional iteration using the fixed point algorithm. That is, if x∗ is a root of the function, 
