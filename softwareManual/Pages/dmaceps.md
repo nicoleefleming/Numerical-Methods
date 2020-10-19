@@ -41,7 +41,7 @@ Output is:
 
 
 
-**Implementation/Code:** The following is the code for TseriesApprox
+**Implementation/Code:** The following is the code for dmaceps
 
     public double dmaceps()
     {
