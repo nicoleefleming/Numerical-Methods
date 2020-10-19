@@ -43,7 +43,7 @@ Output is:
 
 
 
-**Implementation/Code:** The following is the code for TseriesApprox
+**Implementation/Code:** 
 
     public double absErr(double x, double y)
     {
