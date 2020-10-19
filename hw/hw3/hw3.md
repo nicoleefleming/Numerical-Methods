@@ -39,7 +39,9 @@ The plot is shown below. This is the second derivative -cos(2.0)'s log-log plot.
 I graphed the -cos, but it doesn't make as much sense since the graph is just the reversed log-log plot of the original function. This is why the information is taken from the other log-log plot. 
 
 ### Sources or links
-[log-log plot code](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/dmaceps.md)
+[log-log plot code](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/log-logplot.md)
+
+[log-log-plot Code](https://github.com/nicoleefleming/math4610/blob/master/PythonCode/log-logplot.py)
 
 ## Task 3
 Write routines that will produce the machine epsilon as discussed in class. Write two separate routines, one for the single precision setting on your computer and one for double precision. Compile and test each of of these routines separately. This means writing a main() program in separate files.
