@@ -25,13 +25,13 @@ To test them to see if they worked, I ran the code with the approximation and 'e
             The Relative Error of e^(2*x) is: 4.999995000024013
 
 ### Sources and Software Manual Pages
-[absErr Software Manual Page]()
+[absErr Software Manual Page](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/absErr.md)
 
-[relErr Software Manual Page]()
+[relErr Software Manual Page](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/relErr.md)
 
-[absErr code]()
+[absErr code](https://github.com/nicoleefleming/math4610/blob/master/math4610Code/src/main/java/error.java)
 
-[relErr code]()
+[relErr code](https://github.com/nicoleefleming/math4610/blob/master/math4610Code/src/main/java/error.java)
 
 ## Task 2
 Create a graphics routine that will create a 2D plot of data that includes the following.
@@ -172,7 +172,7 @@ This is the function g'(x):
 ### Sources and Software Manual Pages
 [fixedPtIter Software Manual Page](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/fixedPtIter.md)
 
-[fixedPtIter code]()
+[fixedPtIter code](https://github.com/nicoleefleming/math4610/blob/master/math4610Code/src/main/java/rootFinders.java)
 
 ## Task 4
 Apply a fixed point iteration to finding the closest root to zero of the following function.
@@ -223,7 +223,7 @@ I am not sure why the algorithm is not converging to finding the root. But it is
 ### Sources and Software Manual Pages
 [fixedPtIter Software Manual Page](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/fixedPtIter.md)
 
-[fixedPtIter code]()
+[fixedPtIter code](https://github.com/nicoleefleming/math4610/blob/master/math4610Code/src/main/java/rootFinders.java)
 ## Task 5
 Write a routine/code to implement the Bisection method for approximating the location of a root of a function of one variable. Write the code to incorporate 
 the computation of the number of steps to meet a given tolerance instead of the while loop version described in class. Test your code on the problem defined in Task 4.
@@ -302,7 +302,7 @@ The solution to the test problem for one root of f(x) = x-3 was:
 ### Sources and Software Manual Pages
 [bisection Software Manual Page](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/bisection.md)
 
-[bisection code]()
+[bisection code](https://github.com/nicoleefleming/math4610/blob/master/math4610Code/src/main/java/rootFinders.java)
 
 ## Task 6
 Search the internet for sites that discuss root finding problems in practice. Write a brief summary of what you find including the pros and cons of shared libraries. 
