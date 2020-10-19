@@ -46,7 +46,7 @@ Output is:
 
 
 
-**Implementation/Code:** The following is the code for TseriesApprox
+**Implementation/Code:** 
 
     public double relErr(double aprime, double ah, double a, double h)
     {
