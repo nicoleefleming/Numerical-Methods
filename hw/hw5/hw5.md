@@ -39,7 +39,13 @@ Create a hybrid method that will search for roots by combining the Bisection met
 ## Task 6
  Search the internet for sites that detail differences between the Bisection method, Newton's method, and the Secant method. Write a brief summary of what you find including the pros and cons of the methods. Your write up should be a brief paragraph (3 or 4 sentences) that describe your findings. Include links to the sites you cite.
 ## Response
-
+The Bisection method is always convergent, but has a slow convergence rate. The Newton Method is expensive with computations since it requires the function and the derivative, but it might never converge if the tangent line to the function is near parallel. Newton's method does ensure quadratic convergence when it converges, adn it has the fastest convergence rate. The Secant method only requires one function evaluation each iteration compared to Newton's two.  
 ## Sources
+[Bisection advantages/disadvantages](https://www.cbpbu.ac.in/userfiles/file/2020/STUDY_MAT/PHYSICS/NP%202.pdf)
 
+[Newton advantages/disadvantages](http://epoch.uwaterloo.ca/syde312/open_methods/page3.htm)
+
+[Secant advantages/disadvantages](http://studyhelpszone.blogspot.com/2009/07/advantages-and-disadvanteges-of-secant.html)
+
+[Secant pros/cons](https://www.lehigh.edu/~ineng2/clipper/notes/secant.htm)
 
