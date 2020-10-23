@@ -18,6 +18,8 @@
 ## Root Finding Methods
 1. [fixedPtIter](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/fixedPtIter.md)
 2. [bisection](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/bisection.md)
-
+3. [newton](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/newton.md)
+4. [secant](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/secant.md)
+5. [hybridN](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/hybridN.md)
 
 
