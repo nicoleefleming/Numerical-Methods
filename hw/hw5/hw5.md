@@ -114,16 +114,20 @@ x0 = -1.0 , x1 = -0.5
 ## Task 3
 Do a computational convergence analysis on Newton's method to verify quadratic convergence. Use the example defined in Tasksheet 4 to illustrate the work.
 ## Response
+I wrote a linear regression analysis for the error Newton's method. For some reason, I have yet to get the convergence analysis to make sense. I will work on this more when I finish a test for another class. I think the bug is occuring in my code when I am calculating the error. I will adjust the code to reflect the change for the bug, and will put the full response here. 
 
+However, using matplotlib in python, the plot also shows quadratic convergence. This graph may be displayed if the information above is not super clear to me. 
 ## Sources
-
+[linreg]()
 
 ## Task 4
 Repeat Task 3 for the secant method. (Test computational convergence)
 ## Response
+I wrote a linear regression analysis for the error Newton's method. For some reason, I have yet to get the convergence analysis to make sense. I will work on this more when I finish a test for another class. I think the bug is occuring in my code when I am calculating the error. I will adjust the code to reflect the change for the bug, and will put the full response here. 
 
+However, using matplotlib in python, the plot also shows quadratic convergence. This graph may be displayed if the information above is not super clear to me.
 ## Sources
-
+[linreg]()
 
 ## Task 5
 Create a hybrid method that will search for roots by combining the Bisection method when the approximations are too far from a root and then switches over to Newton's method when the approximations are close enough.
