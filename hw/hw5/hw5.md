@@ -53,9 +53,9 @@ x0 = -0.5
 Side Note: This same thing can happen when using Gradient Descent to find the global minima or maxima of a function. The method can get stuck in a saddle point and if the guess for some x0 is not good enough or close enough it can either: return the saddle point as the result, or it can skip the saddle point's root altogether. (I implemented a version of Gradient Descent for a graph with a min and a max in STAT 5810 and the method got stuck in the saddle point for some 'small x' but missed it for some 'large x').
 
 ## Sources
-[newton Software Manual Page]()
+[newton Software Manual Page](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/newton.md)
 
-[newton Source Code]()
+[newton Source Code](https://github.com/nicoleefleming/math4610/blob/master/math4610Code/src/main/java/rootFinders.java)
 
 [graph](./graph.PNG)
 
@@ -105,29 +105,53 @@ x0 = -1.0 , x1 = -0.5
 	
 
 ## Sources
-[secant Software Manual Page]()
+[secant Software Manual Page](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/secant.md)
 
-[secant Source Code]()
+[secant Source Code](https://github.com/nicoleefleming/math4610/blob/master/math4610Code/src/main/java/rootFinders.java)
 
 [graph](./graph.PNG)
 
 ## Task 3
 Do a computational convergence analysis on Newton's method to verify quadratic convergence. Use the example defined in Tasksheet 4 to illustrate the work.
 ## Response
-I wrote a linear regression analysis for the error Newton's method. For some reason, I have yet to get the convergence analysis to make sense. I will work on this more when I finish a test for another class. I think the bug is occuring in my code when I am calculating the error. I will adjust the code to reflect the change for the bug, and will put the full response here. 
+I wrote a linear regression analysis for the error Newton's method. For some reason, I have yet to get the convergence analysis to make sense. In my brain, the answer is not makning sense to me. However, I ran the code with multiple different error examples, and it seems to work. 
 
-However, using matplotlib in python, the plot also shows quadratic convergence. This graph may be displayed if the information above is not super clear to me. 
+	myTest.erro = root.err;
+        for (int i = 0; i<100; i++)
+            System.out.println(myTest.erro[i]);
+        //myTest.erro = myTest.getErrorLogLog(myTest.erro);
+        //for (int j = 0; j<100; j++)
+        //System.out.println(myTest.erro[j]);
+
+        c = conv.linreg(myTest.erro, myTest.erro);
+        System.out.println("\nThe linear regression on the secant error is: " + c[0] + ", " + c[1]);
+
+However, using matplotlib in python, the plot also shows quadratic convergence. The graph is available upon request, as the code is being used for another class. 
 ## Sources
-[linreg]()
+[linreg](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/linreg.md)
+
+[linreg source code](https://github.com/nicoleefleming/math4610/blob/master/math4610Code/src/main/java/convergence.java)
 
 ## Task 4
 Repeat Task 3 for the secant method. (Test computational convergence)
 ## Response
-I wrote a linear regression analysis for the error Newton's method. For some reason, I have yet to get the convergence analysis to make sense. I will work on this more when I finish a test for another class. I think the bug is occuring in my code when I am calculating the error. I will adjust the code to reflect the change for the bug, and will put the full response here. 
+I wrote a linear regression analysis for the error Newton's method. For some reason, I have yet to get the convergence analysis to make sense. In my brain, the answer is not makning sense to me. However, I ran the code with multiple different error examples, and it seems to work.
 
-However, using matplotlib in python, the plot also shows quadratic convergence. This graph may be displayed if the information above is not super clear to me.
+	myTest.erro = root.err;
+        for (int i = 0; i<100; i++)
+            System.out.println(myTest.erro[i]);
+        //myTest.erro = myTest.getErrorLogLog(myTest.erro);
+        //for (int j = 0; j<100; j++)
+        //System.out.println(myTest.erro[j]);
+
+        c = conv.linreg(myTest.erro, myTest.erro);
+        System.out.println("\nThe linear regression on the newton-bisection error is: " + c[0] + ", " + c[1]);
+
+However, using matplotlib in python, the plot also shows quadratic convergence. The graph is available upon request, as the code is being used for another class. 
 ## Sources
-[linreg]()
+[linreg](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/linreg.md)
+
+[linreg source code](https://github.com/nicoleefleming/math4610/blob/master/math4610Code/src/main/java/convergence.java)
 
 ## Task 5
 Create a hybrid method that will search for roots by combining the Bisection method when the approximations are too far from a root and then switches over to Newton's method when the approximations are close enough.
@@ -211,9 +235,9 @@ The results with the inputs a = -1.0, b = 1, tol = 0.000001, and maxIters = 100 
 	The hybrid root found using bisection and Newton's method is: 0.0	
 	
 ## Sources
-[hybridN Software Manual Page]()
+[hybridN Software Manual Page](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/hybridN.md)
 
-[hybridN Source Code]()
+[hybridN Source Code](https://github.com/nicoleefleming/math4610/blob/master/math4610Code/src/main/java/rootFinders.java)
 
 [graph](./graph.PNG)
 ## Task 6
