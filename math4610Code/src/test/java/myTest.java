@@ -8,15 +8,31 @@ import static java.lang.Math.cos;
 
 public class myTest {
 
-    public double[] error = new double[19];
+    public double[] erro = new double[19];
+
+    public double[] getErrorLogLog (double[] error)
+    {
+        for (int i = 0; i < error.length; i++)
+        {
+            if(error[i] == 0.0)
+            {
+                error[i] = 0.0;
+            }
+            else {
+                error[i] = Math.log(error[i]);
+            }
+        }
+        return error;
+    }
     private double difference;
 
     public static void main(String args[])
     {
         precision myprec = new precision();
-        myTest myTest = new myTest();
+        test myTest = new test();
         error Err = new error();
         rootFinders root = new rootFinders();
+        convergence conv = new convergence();
 
         /*double hold;
         //TASKSHEET 2 Task 1 -- state which language you will be using by printing to the console.
@@ -44,33 +60,34 @@ public class myTest {
             }
             else
             {
-                hold = Math.pow((10),(i-1));
+                double hold = Math.pow((10), (i - 1));
                 h[i] = (1/hold);
             }
         }
 
-        sol = myTest.TseriesApprox(h);
-        for(int i = 0; i < sol.length; i++)
-            System.out.println(sol[i]);
+        //sol = myTest.TseriesApprox(h);
+        //for(int i = 0; i < sol.length; i++)
+        //    System.out.println(sol[i]);
 
-        System.out.println("\n Values of h: \n");
-        for(int i = 0; i < h.length; i++)
-            System.out.println(h[i]);
+        //System.out.println("\n Values of log(h): \n");
+        //for(int i = 0; i < h.length; i++)
+        //   System.out.println(h[i]);
+
 
         //exact solution
-        System.out.println("Exact value: " + myTest.difference);
+        //System.out.println("Exact value: " + myTest.difference);
 
         //Tasksheet 3 task 3
-        double sineps = 0.0;
-        sineps = myprec.smaceps();
-        System.out.println("The single machine precision: " + sineps + "\n" );
+        //double sineps = 0.0;
+        //sineps = myprec.smaceps();
+        //System.out.println("The single machine precision: " + sineps + "\n" );
 
-        double doueps = 0.0;
-        doueps = myprec.dmaceps();
-        System.out.println("The double machine precision: " + doueps + "\n");
+        //double doueps = 0.0;
+        //doueps = myprec.dmaceps();
+        //System.out.println("The double machine precision: " + doueps + "\n");
         */
 
-        //Tasksheet 4 task 1
+        /*//Tasksheet 4 task 1
         double x = 3;
         double h = 0.00001;
         double derived = Math.exp(2*x);
@@ -90,8 +107,62 @@ public class myTest {
         int iters = 100;
         double ans = root.bisection(a,b,tol,iters);
         System.out.println("Bisection finds the root to be: " + ans);
+        //Tasksheet 4 task 3,4
         ans = root.fixedPtIter(.2,h,iters);
         System.out.println("Fixed Point finds the root to be: " + ans);
+        */
+
+        //Tasksheet 5 # 1 Newton verification
+        double h = 0.00001;
+        double tol = h;
+        double x = 0.1;
+        double a = -1.0;
+        double b = 1.0;
+        int iters = 100;
+        double[] c = new double[2];
+
+        double ans = root.newton(x, tol, iters);
+        System.out.println("Newton roots found: " + ans);
+
+        myTest.erro = root.err;
+        for (int i = 0; i<100; i++)
+            System.out.println(myTest.erro[i]);
+        //myTest.erro = myTest.getErrorLogLog(myTest.erro);
+        //for (int j = 0; j<100; j++)
+            //System.out.println(myTest.erro[j]);
+
+        c = conv.linreg(myTest.erro, myTest.erro);
+        System.out.println("\nThe linear regression on the newton error is: " + c[0] + ", " + c[1]);
+
+
+        //Tasksheet 5 # 2 Secant verification
+        ans = root.secant(-1.0, -0.5, tol, iters);
+        System.out.println("Seccant roots found: " + ans);
+
+        myTest.erro = root.err;
+        for (int i = 0; i<100; i++)
+            System.out.println(myTest.erro[i]);
+        //myTest.erro = myTest.getErrorLogLog(myTest.erro);
+        //for (int j = 0; j<100; j++)
+        //System.out.println(myTest.erro[j]);
+
+        c = conv.linreg(myTest.erro, myTest.erro);
+        System.out.println("\nThe linear regression on the secant error is: " + c[0] + ", " + c[1]);
+
+        //Tasksheet 5 # 5 Hybrid - Newton/Bisection method verification
+        ans =root.hybridN(a, b, tol, iters);
+        System.out.println("The hybrid solution using bisection and Newton's method is: " + ans);
+
+        myTest.erro = root.err;
+        for (int i = 0; i<100; i++)
+            System.out.println(myTest.erro[i]);
+        //myTest.erro = myTest.getErrorLogLog(myTest.erro);
+        //for (int j = 0; j<100; j++)
+        //System.out.println(myTest.erro[j]);
+
+        c = conv.linreg(myTest.erro, myTest.erro);
+        System.out.println("\nThe linear regression on the newton-bisection error is: " + c[0] + ", " + c[1]);
+
     }
 
     //TASKSHEET 2 Task 5 -- code to solve the Taylor Series Expansion for an f(x) with a given h
@@ -101,7 +172,7 @@ public class myTest {
         double[] diff = new double[19];
         double[] err = new double[19];
         double exactvsact;
-        err = error;
+        err = erro;
 
         double x = 2.0;
         //Use the Tseries approximation for the difference.
@@ -131,7 +202,7 @@ public class myTest {
             System.out.println(err[i]);
 
         difference = exactvsact;
-        error = err;
+        erro = err;
         //return approximation
         return diff;
     }
@@ -164,7 +235,7 @@ public class myTest {
                 writer.write(", ");
 
                 //write to file for all error terms
-                String val = Double.toString(error[i]);
+                String val = Double.toString(erro[i]);
                 writer.write(val);
                 writer.write("\n");
             }
