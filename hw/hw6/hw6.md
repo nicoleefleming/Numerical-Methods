@@ -1,4 +1,4 @@
-# Math 4610 Tasksheet 5
+# Math 4610 Tasksheet 6
 
 ## Task 1
 In this problem consider the function
@@ -63,14 +63,13 @@ Let's change the problem a bit. Use your hybrid code to find as many roots as po
 ## Task 6
 Search the internet for sites that discuss location of multiple roots in one dimension. Discuss the methods used to find additional toots. Write a brief summary of what you find including the pros and cons of the methods. Your write up should be a brief paragraph (3 or 4 sentences) that describe your findings. Include links to the sites you cite.
 ## Response
-
-
+The roots in a specified area are hard to get any specific algorithm to comput all the roots. The algorithm will search and hunt for one root and return that specific root. The methods used to find all the roots I found were: Exclusion and Enclosure methods such as the Lehmer–Schur algorithm uses the Schur–Cohn test for circles; a variant, Wilf's global bisection algorithm uses a winding number computation for rectangular regions in the complex plane; Real Root Isolation, Aberth's Method, and a few others that are older than Newton's Method; The last is Square Free Facotrization which doesn't seem as good of a choice as the other algorithms. The pros to the first set in Exclusion and enclosure are that you are guarenteed to have a root found in a specified interval, however, the Real Roots Isolation are faster to converge. The cons of the Exclusion are that they might not have a root on the interval, or there might be a saddle point before the root where the algorithm gets stuck, for the others, it may miss multiple roots in one interval as it converges to the closest one possible. 
 
 ## Sources
-[]()
+[Root Finding Algorithms](https://en.wikipedia.org/wiki/Root-finding_algorithms)
 
-[]()
+[1D-Root Finding Techniques](https://www.gnu.org/software/gsl/doc/html/roots.html)
 
-[]()
+[Root Finding in 1D](http://albi3ro.github.io/M4/Roots_1D.html)
 
-[]()
+[Root Finding Algorithms](https://medium.com/cantors-paradise/some-root-finding-algorithms-5c6fa8a4a165)
