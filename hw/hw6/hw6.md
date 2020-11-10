@@ -5,27 +5,58 @@ In this problem consider the function
                   f(x)=e^(−x^2) sin(4x^2−1.0)+0.051
 Try all four methods for finding roots that you have developed. Start by computing the closest root to zero. Hint: Start with Bisection on a small interval around x∗=0.0 to bracket the root and then apply the other methods to verify they work. Write a code that is linked to your shared library, jar-file, or python module folder.
 ## Response
+With this problem, I first applied the bisection method for the interval ( -0.4, 0.6 ) which returns 0.48361358642578123. The code for bisection that performed this was:
 
+	a = -0.4;
+       	b = 0.6;
+        ans = root.bisection(a, b, tol, iters);
+        //print out the root
+        System.out.println(ans);
+	
+For the Secant Method I called the method previously written, and passed in -0.4 for x0 and 0.6 for x1. This method returned 0.48361358642578123. The code that performed this was:
+
+	//1 - secant
+        ans = root.bisection(a, b, tol, iters);
+        //print out the root
+        System.out.println(ans);
+
+For Newton's Method I called the method previously written in the jar file, and had f and f2 as the original and the derivative respectively. The root found was not a valid answer. With three iterations the root was 0.4414197630292626. The code that recieved the result of the root is:
+
+	ans = root.newton(0.1,tol,5);
+        //print out the root
+        System.out.println(ans);
+	
+For the HybridNewton method I called the method previously written method hybridN, and passed in a = -0.4 and b = 0.6. The root found was 0.4999995708465576. The code that found the root is:
+
+	ans = root.hybridN(a,0.5,tol,iters);
+        //print out the root
+        System.out.println(ans);
+	
+I could have done this all in one method named solve that would apply these methods and implement them 
 ## Sources
-[]()
+[bisection Software Manual Page](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/bisection.md)
 
-[]()
+[secant Software Manual Page](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/secant.md)
 
-[]()
+[newton Software Manual Page](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/newton.md)
+
+[hybridN Software Manual Page](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/hybridN.md)
+
+[source Code for Root Finding Methods](https://github.com/nicoleefleming/math4610/blob/master/math4610Code/src/main/java/rootFinders.java)
+
+[Source code for where it was run from](https://github.com/nicoleefleming/math4610/blob/master/math4610Code/src/test/java/myTest.java)
 
 ## Task 2
 Apply your Newton method to the function in Task 1 by starting 
-x0=−5.0 and x0=6. If we want the root closest to zero, as in Task1, compare the results obtained to the root we found in the previous Task. What went right or wrong?
+x0=−5.0 and x0=6. If we want the root closest to zero, as in Task 1, compare the results obtained to the root we found in the previous Task. What went right or wrong?
 ## Response
-
+This method was not able to focus in on one root. However, the graph is really flat at -5 and at 6. I beleive that the method was getting stuck on the flat part, since the derivative of f is also flat at these points, it was running through and not finding the root as a result of the flatness of the function. The odd part about this is that the narrowing of the root cannot be started too far from 0 and the iterations run through fast to get a root, but they can't be started too far from zero or they get stuck in the flatness. Where the slope is close to 0. 
 	
 
 ## Sources
-[]()
+[newton Software Manual Page](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/newton.md)
 
-[]()
-
-[]()
+[Source Code for newton](https://github.com/nicoleefleming/math4610/blob/master/math4610Code/src/main/java/rootFinders.java)
 
 ## Task 3
 Come up with an algorithm that starts by applying something like a hybrid method starting with an initial interval, 
