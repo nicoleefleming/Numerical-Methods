@@ -373,11 +373,11 @@ public class rootFinders
         double errorn = error;
 
         //loop thorugh based on error staying larger than the tolerance. Then return c.
-        while(error > tol && iters < maxIters)
+       while(error > tol && iters < maxIters)
         {
             c = 0.5 * (a+b);
             xnew = c - (f(c) * ((b-a)/fb-fa));
-
+            double holder = c;
             //first Newton Error
             errorn = Math.abs(xnew - c);
 
@@ -385,8 +385,11 @@ public class rootFinders
             if(errorn > error)
             {
                 //Bisection section
-                for (int i = 0; i < 4; i++) {
+                for (int i = 0; i < 2; i++) {
                     fc = f(c);
+                    if (holder - c <= 0.000000001) { //I know this isn't exactly correct, but I will revisit this problem later.
+                        return c;
+                    }
                     if (fa * fc == 0) {
                         b = c;
                         fb = fc;
