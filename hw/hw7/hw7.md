@@ -5,7 +5,7 @@ Write a routine to compute the solution of an upper triangular matrix. Test the 
 
         
 a_(i,j)=  0, j<i
-        ⎨ i+j−1, j≥i
+          i+j−1, j≥i
         
 Finally, set b_i=1. Hint: You should write a routine that will initialize the matrix above in a general way to use over and over in examples.
 
