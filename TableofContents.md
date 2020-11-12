@@ -6,7 +6,8 @@
 4. [Homework 4](https://github.com/nicoleefleming/math4610/tree/master/hw/hw4/hw4.md)
 5. [Homework 5](https://github.com/nicoleefleming/math4610/tree/master/hw/hw5/hw5.md)
 6. [Homework 6](https://github.com/nicoleefleming/math4610/tree/master/hw/hw6/hw6.md)
-
+7. [Homework 7](https://github.com/nicoleefleming/math4610/tree/master/hw/hw7/hw7.md)
+8. [Homework 8](https://github.com/nicoleefleming/math4610/tree/master/hw/hw8/hw8.md)
 
 ## Software Manual
 [Table of Contents](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/TableofContents.md)
