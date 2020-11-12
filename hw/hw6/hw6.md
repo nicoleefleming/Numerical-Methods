@@ -62,22 +62,175 @@ This method was not able to focus in on one root. However, the graph is really f
 Come up with an algorithm that starts by applying something like a hybrid method starting with an initial interval, 
 [−5,6], that will find the closest root to zero. Hint: you will need to modify the logic a little in the Bisection part to avoid finding different zeros than the one found in Task 1.
 ## Response
+I modified the hybridN program to search for when a temp value set before the bisection was equal to the value of c in the bisection section. I know it isn't completely accurate, I plan to get more clarification on what exactly is wrong or how to fix it in Office Hours the next time I am able to go to them. For now, here is the modified code along with the link to rootFinders where the code is inserted in a comment form.
+	
+	public double hybridN(double a, double b, double tol, int maxIters)
+    {
+        //check if [a,b] is valid
+        double tmp;
+        double holder;
+        if (a>b)
+        {
+            tmp = b;
+            b = a;
+            a = tmp;
+        }
 
+        //initialize other variables
+        int iters = 0;
+        double error = 10.0 * tol;
+        double fa = f(a);
+        double fb = f(b);
+        double fc;
+        double c = 0.0;
+        double xnew = 0.0;
+
+        //check other cases that could happen
+	//        if (fa * fb > 0)
+	//        {
+	//            System.out.println("Error");
+	//            return 0.0;
+	//        }
+        if (fa == 0)
+        {
+            return a;
+        }
+        if(fb == 0)
+        {
+            return b;
+        }
+
+        //initialize errorb and errorn
+        double errorb = error;
+        double errorn = error;
+
+        //loop thorugh based on error staying larger than the tolerance. Then return c.
+        while(error > tol && iters < maxIters)
+        {
+            c = 0.5 * (a+b);
+            xnew = c - (f(c)/f2(c));
+            holder = c;
+            //first Newton Error
+            errorn = Math.abs(xnew - c);
+
+            //check if Newton's method may fail
+            if(errorn > Math.abs(b-a))
+            {
+                //Bisection section
+                for (int i = 0; i < 4; i++) {
+                    fc = f(c);
+                    if (holder - c <= 0.000000001) { //I know this isn't exactly correct, but I will revisit this problem later.
+                        return c;
+                    }
+
+                    if (fa * fc == 0) {
+                        b = c;
+                        fb = fc;
+                    } else {
+                        a = c;
+                        fa = fc;
+                    }
+                    c = 0.5 * (a + b);
+                    errorb = Math.abs(b - a);
+                }
+            }
+            error = errorb;
+            err[iters] = error;
+            iters = iters + 1;
+
+        }
+        return c;
+    }
+	
 ## Sources
-[]()
+[rootFinders source code](https://github.com/nicoleefleming/math4610/blob/master/math4610Code/src/main/java/rootFinders.java)
 
-[]()
+[Software Manual Page hybridN](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/hybridN.md)
 
 ## Task 4
 Repeat Task 3 for the hybrid method using the secant method. Use the results to verify the results in Task 3.
 ## Response
+I wrote the alterations for the hybrid method using bisection and the secant method. I know it isn't completely accurate, I plan to get more clarification on what exactly is wrong or how to fix it in Office Hours the next time I am able to go to them.
+	
+	public double hybridS(double a, double b, double tol, int maxIters)
+   	{
+        //check if [a,b] is valid
+        double tmp;
+        if (a>b)
+        {
+            tmp = b;
+            b = a;
+            a = tmp;
+        }
 
+        //initialize other variables
+        int iters = 0;
+        double error = 10.0 * tol;
+        double fa = f(a);
+        double fb = f(b);
+        double fc;
+        double c = 0.0;
+        double xnew = 0.0;
 
+        //check other cases that could happen
+        //if (fa * fb > 0)
+        //{
+        //    System.out.println("Error");
+        //    return 0.0;
+        //}
+        if (fa == 0)
+        {
+            return a;
+        }
+        if(fb == 0)
+        {
+            return b;
+        }
+
+        //initialize errorb and errorn
+        double errorb = error;
+        double errorn = error;
+
+        //loop thorugh based on error staying larger than the tolerance. Then return c.
+        while(error > tol && iters < maxIters)
+        {
+            c = 0.5 * (a+b);
+            xnew = c - (f(c) * ((b-a)/fb-fa));
+            double holder = c;
+            //first Newton Error
+            errorn = Math.abs(xnew - c);
+
+            //check if Newton's method may fail
+            if(errorn > error)
+            {
+                //Bisection section
+                for (int i = 0; i < 2; i++) {
+                    fc = f(c);
+                    if (holder - c <= 0.000000001) { //I know this isn't exactly correct, but I will revisit this problem later.
+                        return c;
+                    }
+                    if (fa * fc == 0) {
+                        b = c;
+                        fb = fc;
+                    } else {
+                        a = c;
+                        fa = fc;
+                    }
+                    c = 0.5 * (a + b);
+                    errorb = Math.abs(b - a);
+                }
+            }
+            error = errorb;
+            err[iters] = error;
+            iters = iters + 1;
+        }
+        return c;
+    }
 
 ## Sources
-[]()
+[rootFinders source code](https://github.com/nicoleefleming/math4610/blob/master/math4610Code/src/main/java/rootFinders.java)
 
-[]()
+[hybridS](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/hybridS.md)
 
 ## Task 5
 Let's change the problem a bit. Use your hybrid code to find as many roots as possible in the interval, [−5,6]. Note that you will need to write a bit of logic into your code that breaks the interval into intervals acceptable for use of the Bisection method. Hint: Write code that will produce subintervals where f(xk) f(xk+1)<0. You may need to refine the points which means dividing the initial interval into smaller and smaller intervals.
