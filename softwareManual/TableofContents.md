@@ -26,6 +26,10 @@
 8. [f2](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/f2.md)
 9. [solve](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/solve.md)
 
+## LUD and GE solving
+1. []()
+2. []()
+
 ## Matrix Operations
 1. []()
 2. []()
