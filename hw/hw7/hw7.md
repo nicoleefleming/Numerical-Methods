@@ -56,8 +56,11 @@ Write code that will reduce a square matrix to row echelon form. You do not need
 ## Task 6
 Search the internet for sites that document the conditions on matrices that ensure we will be able to compute the solution of a linear system of equations. Write a brief paragraph (3 or 4 sentences) that describe your findings. Include links to the sites you cite.
 ### Response
+There is a unique solution to a Matrix of a system of equations if the matrix is full rank. This means that the matrix has a full basis for the system of equations. This also means that the matrix is invertible. This makes the matrix singular. There are more non-singluar matrices than singular in the world of systems of equations or data matrices, but those that have solutions have full rank meaning no variable is made up of a +/- form of another. 
 
 ### Sources
-[]()
+[matrix equation with a solution](https://mathoverflow.net/questions/81/when-does-a-matrix-equation-have-a-solution)
 
-[]()
+[Invertible Matrix Theorem](https://mathworld.wolfram.com/InvertibleMatrixTheorem.html)
+
+[Consistent vs Inconsistent](http://www.maths.nuigalway.ie/~rquinlan/MA203/section1-5.pdf)
