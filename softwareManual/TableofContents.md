@@ -21,5 +21,20 @@
 3. [newton](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/newton.md)
 4. [secant](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/secant.md)
 5. [hybridN](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/hybridN.md)
+6. [hybridS](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/hybridS.md)
+7. [f](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/f.md)
+8. [f2](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/f2.md)
+9. [solve](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/solve.md)
 
+## Matrix Operations
+1. []()
+2. []()
+
+## Vector Operations
+1. []()
+2. []()
+
+## Parallel Programs
+1. []()
+2. []()
 
