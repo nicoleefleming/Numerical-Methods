@@ -27,7 +27,7 @@ where the method belonds to the class rootFinders. These commands should also wo
 
 **Usage/Example:**
 
-        double b = f(xold);
+        double b = f(xold); // f = x*x
         System.out.println(b);
 
 Output is:
