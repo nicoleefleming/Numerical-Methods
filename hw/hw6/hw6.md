@@ -288,11 +288,11 @@ The verification code returns
 	
 
 ## Sources
-[solve Software Manual Page](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/hybridS.md)
+[solve Software Manual Page](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/solve.md)
 
-[f Software Manual Page](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/hybridS.md)
+[f Software Manual Page](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/f.md)
 
-[f2 Software Manual Page](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/hybridS.md)
+[f2 Software Manual Page](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/f2.md)
 
 [RootFinders Source Code](https://github.com/nicoleefleming/math4610/blob/master/math4610Code/src/main/java/rootFinders.java)
 
