@@ -70,13 +70,13 @@ public class rootFinders
     }
 
     double f2(double x){
-        return Math.exp(3*x*x) + 6*x*x*Math.exp(3*x*x); //1.0;
+        return 2*Math.exp(-(x*x)) * x*(4*Math.cos(4*(x*x) - 1)*Math.sin(4*(x*x) - 1)); //1.0;
     }
 
     public double f(double x)
     {
         //function formula here
-        double f = x*Math.exp(Math.pow(3*x,2)); //(x - 3);
+        double f = Math.exp(-(x*x))*Math.sin(4*(x*x) -1.0) + 0.051; //(x - 3);
 
         return f;
     }
@@ -186,79 +186,6 @@ public class rootFinders
     {
         //check if [a,b] is valid
         double tmp;
-        if (a>b)
-        {
-            tmp = b;
-            b = a;
-            a = tmp;
-        }
-
-        //initialize other variables
-        int iters = 0;
-        double error = 10.0 * tol;
-        double fa = f(a);
-        double fb = f(b);
-        double fc;
-        double c = 0.0;
-        double xnew = 0.0;
-
-        //check other cases that could happen
-        if (fa * fb > 0)
-        {
-            System.out.println("Error");
-            return 0.0;
-        }
-        if (fa == 0)
-        {
-            return a;
-        }
-        if(fb == 0)
-        {
-            return b;
-        }
-
-        //initialize errorb and errorn
-        double errorb = error;
-        double errorn = error;
-
-        //loop thorugh based on error staying larger than the tolerance. Then return c.
-        while(error > tol && iters < maxIters)
-        {
-            c = 0.5 * (a+b);
-            xnew = c - (f(c)/f2(c));
-
-            //first Newton Error
-            errorn = Math.abs(xnew - c);
-
-            //check if Newton's method may fail
-            if(errorn > Math.abs(b-a))
-            {
-                //Bisection section
-                for (int i = 0; i < 4; i++) {
-                    fc = f(c);
-                    if (fa * fc == 0) {
-                        b = c;
-                        fb = fc;
-                    } else {
-                        a = c;
-                        fa = fc;
-                    }
-                    c = 0.5 * (a + b);
-                    errorb = Math.abs(b - a);
-                }
-            }
-            error = errorb;
-            err[iters] = error;
-            iters = iters + 1;
-        }
-        return c;
-    }
-
-    /*
-    public double hybridN(double a, double b, double tol, int maxIters)
-    {
-        //check if [a,b] is valid
-        double tmp;
         double holder;
         if (a>b)
         {
@@ -331,7 +258,7 @@ public class rootFinders
 
         }
         return c;
-    }*/
+    }
 
     public double hybridS(double a, double b, double tol, int maxIters)
     {
@@ -354,11 +281,11 @@ public class rootFinders
         double xnew = 0.0;
 
         //check other cases that could happen
-        if (fa * fb > 0)
-        {
-            System.out.println("Error");
-            return 0.0;
-        }
+        //if (fa * fb > 0)
+        //{
+        //    System.out.println("Error");
+        //    return 0.0;
+        //}
         if (fa == 0)
         {
             return a;
@@ -373,7 +300,7 @@ public class rootFinders
         double errorn = error;
 
         //loop thorugh based on error staying larger than the tolerance. Then return c.
-       while(error > tol && iters < maxIters)
+        while(error > tol && iters < maxIters)
         {
             c = 0.5 * (a+b);
             xnew = c - (f(c) * ((b-a)/fb-fa));
@@ -381,12 +308,13 @@ public class rootFinders
             //first Newton Error
             errorn = Math.abs(xnew - c);
 
-            //check if Newton's method may fail
+            //check if secant's method may fail
             if(errorn > error)
             {
                 //Bisection section
-                for (int i = 0; i < 2; i++) {
+                for (int i = 0; i < 4; i++) {
                     fc = f(c);
+
                     if (holder - c <= 0.000000001) { //I know this isn't exactly correct, but I will revisit this problem later.
                         return c;
                     }
@@ -397,8 +325,12 @@ public class rootFinders
                         a = c;
                         fa = fc;
                     }
+                    //if(a >= b)
+                      //  return c;
                     c = 0.5 * (a + b);
                     errorb = Math.abs(b - a);
+                    b = b - 1;
+                    a = a + 1;
                 }
             }
             error = errorb;
@@ -407,6 +339,27 @@ public class rootFinders
         }
         return c;
     }
-    
+
+    public double[] solve(double a, double b, int maxIters, double tol){
+        double[] roots = new double[10];
+        double newA = a;
+        double newB = a + 1.0;
+        int iters = 0;
+        rootFinders rt = new rootFinders();
+
+        if(newB > b)
+            return roots;
+
+        while(iters < maxIters && newB < b)
+        {
+            //call the hybrid functions with the newAB interval
+            roots[iters] = hybridN(newA, newB, tol, maxIters);
+            newA = newB;
+            newB = newB + 1.0;
+            iters = iters + 1;
+        }
+
+        return roots;
+    }
 }
 
