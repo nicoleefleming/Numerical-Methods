@@ -34,8 +34,10 @@ n×n. Also, write similar, but separate routines that produce upper or lower tri
 []()
 ## Task 4
 Do the same for a diagonal systems of equations. That is where
-                a_i,j =    0, j≠i
-                         ≠ 0, j=i
+                
+                a_(i,j) =    0, j≠i
+                           ≠ 0, j=i
+                           
 As an example, choose random nonzero values for the diagonal entries to test the code. Make sure that the code is as efficient as possible.
 ### Response
 
