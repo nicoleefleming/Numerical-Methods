@@ -141,6 +141,8 @@ I modified the hybridN program to search for when a temp value set before the bi
         }
         return c;
     }
+    
+I also attempted a way to get the root closest to zero by slowly shortening/focusing the interval to 0.0. I am working on some bugs in the code, and will most likely finish it after this is due, but, I am working on that method to get the program to function the way it needs to for this program. 
 	
 ## Sources
 [rootFinders source code](https://github.com/nicoleefleming/math4610/blob/master/math4610Code/src/main/java/rootFinders.java)
@@ -226,7 +228,8 @@ I wrote the alterations for the hybrid method using bisection and the secant met
         }
         return c;
     }
-
+    
+I also attempted a way to get the root closest to zero by slowly shortening/focusing the interval to 0.0. I am working on some bugs in the code, and will most likely finish it after this is due, but, I am working on that method to get the program to function the way it needs to for this program.
 ## Sources
 [rootFinders source code](https://github.com/nicoleefleming/math4610/blob/master/math4610Code/src/main/java/rootFinders.java)
 
@@ -235,15 +238,65 @@ I wrote the alterations for the hybrid method using bisection and the secant met
 ## Task 5
 Let's change the problem a bit. Use your hybrid code to find as many roots as possible in the interval, [−5,6]. Note that you will need to write a bit of logic into your code that breaks the interval into intervals acceptable for use of the Bisection method. Hint: Write code that will produce subintervals where f(xk) f(xk+1)<0. You may need to refine the points which means dividing the initial interval into smaller and smaller intervals.
 ## Response
+Using this methodology, I used a loop over the hybrid methods to find the roots. It was interesting to note that the only root that the implementation I have of this code only successfully found the root at 0.5 and -0.5. It didn't register that the roots at +/-1.04 and +/-1.31. I am working my way through those bugs, which I am guessing is due to my check condition and machine error. This is the method that looped over the hybrid methods, (I interchanged hybridN with hybridS to test both) as well as the code used to print out and verify the roots. 
 
+Loop code:
 
+	public double[] solve(double a, double b, int maxIters, double tol){
+        double[] roots = new double[10];
+        double newA = a;
+        double newB = a + 1.0;
+        int iters = 0;
+        rootFinders rt = new rootFinders();
+
+        if(newB > b)
+            return roots;
+
+        while(iters < maxIters && newB < b)
+        {
+            //call the hybrid functions with the newAB interval
+            roots[iters] = hybridN(newA, newB, tol, maxIters);
+            newA = newB;
+            newB = newB + 1.0;
+            iters = iters + 1;
+        }
+
+        return roots;
+    }
+
+Verification code:
+
+	double[] test = new double[10];
+        double[] zero = new double[10];
+        double[] rt = new double[10];
+        test = root.solve(a,b,iters,tol);
+
+        for(int i = 0; i < 10; i++)
+        {
+            zero[i] = root.f2(test[i]);
+            if(zero[i] == 0)
+            {
+                rt[i] = test[i];
+                System.out.println("Roots found are: " + rt[i] );
+            }
+        }
 	
+The verification code returns
+	
+	Roots found are: -0.5
+	Roots found are: 0.5
+	
+
 ## Sources
-[]()
+[solve Software Manual Page](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/hybridS.md)
 
-[]()
+[f Software Manual Page](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/hybridS.md)
 
-[]()
+[f2 Software Manual Page](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/hybridS.md)
+
+[RootFinders Source Code](https://github.com/nicoleefleming/math4610/blob/master/math4610Code/src/main/java/rootFinders.java)
+
+
 ## Task 6
 Search the internet for sites that discuss location of multiple roots in one dimension. Discuss the methods used to find additional toots. Write a brief summary of what you find including the pros and cons of the methods. Your write up should be a brief paragraph (3 or 4 sentences) that describe your findings. Include links to the sites you cite.
 ## Response
