@@ -30,6 +30,10 @@
 1. []()
 2. []()
 
+## Substitution
+1. []()
+2. []()
+
 ## Matrix Operations
 1. []()
 2. []()
