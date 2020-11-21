@@ -63,24 +63,24 @@ I also created a method for a system of equations that initializes the system no
         return A;
     }
 
-### Sources
-[GESolve]()
+### References
+[GESolve](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/GEsolve.md)
 
-[RHSinit]()
+[RHSinit](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/RHSinit.md)
 
-[forward]()
+[forward](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/forward.md)
 
-[backward]()
+[backward](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/backward.md)
 
-[upperTriangleInit]()
+[upperTriangleInit](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/upperTriangleInit.md)
 
-[Ainit]()
+[Ainit](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/Ainit.md)
 
-[matrixInitializers Source Code]()
+[matrixInitializers Source Code](https://github.com/nicoleefleming/math4610/blob/master/math4610Code/src/main/java/matrixInitializers.java)
 
-[LinearSolvers Source Code]()
+[LinearSolvers Source Code](https://github.com/nicoleefleming/math4610/blob/master/math4610Code/src/main/java/LinearSolvers.java)
 
-[substitution Source Code]()
+[substitution Source Code](https://github.com/nicoleefleming/math4610/blob/master/math4610Code/src/main/java/substitution.java)
 
 ## Task 2
 Do the same for a lower triangular system of equations. Create an example similar to the example in Task 1. All you need to do is transpose the matrix and leave the right hand side alone. Hint: It would be a really good idea to build code that will return the transpose of a matrix.
@@ -149,22 +149,22 @@ I also created a method for a system of equations that initializes the system no
         return transpose;
     }
 
-### Sources
-[GESolve]()
+### References
+[GESolve](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/GEsolve.md)
 
-[RHSinit]()
+[RHSinit](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/RHSinit.md)
 
-[forward]()
+[forward](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/forward.md)
 
-[backward]()
+[backward](https://github.com/nicoleefleming/math5620/blob/master/SoftwareManual/backward.md)
 
-[lowerTriangleInit]()
+[lowerTriangleInit](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/lowerTriangleInit.md)
 
-[matrixT]()
+[matrixT](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/matrixT.md)
 
-[matrixInitializers Source Code]()
+[matrixInitializers Source Code](https://github.com/nicoleefleming/math4610/blob/master/math4610Code/src/main/java/matrixInitializers.java)
 
-[LinearSolvers Source Code]()
+[LinearSolvers Source Code](https://github.com/nicoleefleming/math4610/blob/master/math4610Code/src/main/java/LinearSolvers.java)
 
 ## Task 3
 Write a routine that will produce a square matrix for testing codes in the following tasks. The input should be an integer and the output a square matrix of size 
@@ -173,8 +173,8 @@ n×n. Also, write similar, but separate routines that produce upper or lower tri
 I don't really understand this question. From my knowledge, and my understanding this is already complete. It might just be because I wrote the tasks into their own methods, but The code I have written up to now i.e. upperTriangleInit, lowerTriangleInit, diagInit, Ainit, are all easily modifiable for tasks to initialize a matrix to just a square (see [Ainit]()), an upper Triangle (see [upperTriangleInit]()), lower triangle (see [lowerTriangleInit]()), and a diagonal matrix (see [diagInit]()). All of these methods take the input of an integer n to initialize the matrix. The only part that would change is the values being assigned if there is a specific formula. 
 
 The methods I have written at the moment can be called one after another, but as they are not connected to a process together, there is no way to have the answers make sense together. 
-### Sources
-[matrixInitializers Source Code]()
+### References
+[matrixInitializers Source Code](https://github.com/nicoleefleming/math4610/blob/master/math4610Code/src/main/java/matrixInitializers.java)
 
 ## Task 4
 Do the same for a diagonal systems of equations. That is where
@@ -212,10 +212,10 @@ This method places a zero in each column not in the diagonal, and a random doubl
         0 3.1415 0
         0 0 34.897
 
-### Sources
-[diagInit]()
+### References
+[diagInit](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/diagInit.md)
 
-[matrixInitializers Source Code]()
+[matrixInitializers Source Code](https://github.com/nicoleefleming/math4610/blob/master/math4610Code/src/main/java/matrixInitializers.java)
 
 ## Task 5
 Write code that will reduce a square matrix to row echelon form. You do not need to test for bad pivots or anything else. Write the code as if we know the pivots will be well behaved. Create a random matrix
@@ -324,20 +324,21 @@ I tested this code with both random integers, and random doubles. Both gave me s
         -0.0 1.0 -5.551115123125783E-17
         -0.0 -0.0 0.9999999999999999 
 
-### Sources
-[rref]() 
+### References
+[rref](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/rref.md) 
 
-[swapRows]()
+[swapRows](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/swapRows.md)
 
-[multiplyRow]()
+[multiplyRow](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/multiplyRow.md)
 
-[subtractRow]()
+[subtractRow](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/subtractRow.md)
 
-[Ainit]()
+[Ainit](https://github.com/nicoleefleming/math4610/blob/master/softwareManual/Pages/Ainit.md)
 
-[matrixInitializers Source Code]()
+[matrixInitializers Source Code](https://github.com/nicoleefleming/math4610/blob/master/math4610Code/src/main/java/matrixInitializers.java)
 
-[LinearSolvers Source Code]()
+[LinearSolvers Source Code](https://github.com/nicoleefleming/math4610/blob/master/math4610Code/src/main/java/LinearSolvers.java)
+
 ## Task 6
 Search the internet for sites that document the conditions on matrices that ensure we will be able to compute the solution of a linear system of equations. Write a brief paragraph (3 or 4 sentences) that describe your findings. Include links to the sites you cite.
 ### Response
