@@ -28,7 +28,7 @@ where the method belonds to the class matrixInitializers. These commands should 
 
 The routine has one argument required to perform the operations to return a matrix with the values specified in Ainit.
 
-    A = mat.lowerTriangleInit(n);
+    A = mat.upperTriangleInit(n);
     
     for (int i = 0; i < n; i++)
     {
