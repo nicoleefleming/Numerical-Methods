@@ -22,7 +22,7 @@ where the method belonds to the class matrixInitializers. These commands should 
 
 **Input:** There is one input: int n that will specify the size of the square matrix. 
 
-**Output:** This routine returns a single two dimensional array, A that has the values stored in the array, they will all be values below the diagonal. 
+**Output:** This routine returns a single two dimensional array, A that has the values stored in the array, they will all be values on the diagonal. 
 
 **Usage/Example:**
 
