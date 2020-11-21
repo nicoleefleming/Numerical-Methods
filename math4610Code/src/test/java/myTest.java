@@ -33,6 +33,8 @@ public class myTest {
         error Err = new error();
         rootFinders root = new rootFinders();
         convergence conv = new convergence();
+        LinearSolvers lin = new LinearSolvers();
+        matrixInitializers mat = new matrixInitializers();
 
         /*double hold;
         //TASKSHEET 2 Task 1 -- state which language you will be using by printing to the console.
@@ -112,7 +114,7 @@ public class myTest {
         System.out.println("Fixed Point finds the root to be: " + ans);
         */
 
-        //Tasksheet 5 # 1 Newton verification
+        /*        //Tasksheet 5 # 1 Newton verification
         double h = 0.00001;
         double tol = h;
         double x = 0.1;
@@ -121,48 +123,182 @@ public class myTest {
         int iters = 100;
         double[] c = new double[2];
 
-        double ans = root.newton(x, tol, iters);
-        System.out.println("Newton roots found: " + ans);
+        double ans;
+*/
 
-        myTest.erro = root.err;
-        for (int i = 0; i<100; i++)
-            System.out.println(myTest.erro[i]);
+        /*//= root.newton(x, tol, iters);
+        //System.out.println("Newton roots found: " + ans);
+
+        //myTest.erro = root.err;
+        //for (int i = 0; i<100; i++)
+          //  System.out.println(myTest.erro[i]);
         //myTest.erro = myTest.getErrorLogLog(myTest.erro);
         //for (int j = 0; j<100; j++)
             //System.out.println(myTest.erro[j]);
 
-        c = conv.linreg(myTest.erro, myTest.erro);
-        System.out.println("\nThe linear regression on the newton error is: " + c[0] + ", " + c[1]);
+        //c = conv.linreg(myTest.erro, myTest.erro);
+        //System.out.println("\nThe linear regression on the newton error is: " + c[0] + ", " + c[1]);
 
 
         //Tasksheet 5 # 2 Secant verification
-        ans = root.secant(-1.0, -0.5, tol, iters);
-        System.out.println("Seccant roots found: " + ans);
+        //ans = root.secant(-1.0, -0.5, tol, iters);
+        //System.out.println("Seccant roots found: " + ans);
 
-        myTest.erro = root.err;
-        for (int i = 0; i<100; i++)
-            System.out.println(myTest.erro[i]);
+        //myTest.erro = root.err;
+        //for (int i = 0; i<100; i++)
+          //  System.out.println(myTest.erro[i]);
         //myTest.erro = myTest.getErrorLogLog(myTest.erro);
         //for (int j = 0; j<100; j++)
         //System.out.println(myTest.erro[j]);
 
-        c = conv.linreg(myTest.erro, myTest.erro);
-        System.out.println("\nThe linear regression on the secant error is: " + c[0] + ", " + c[1]);
+        //c = conv.linreg(myTest.erro, myTest.erro);
+        //System.out.println("\nThe linear regression on the secant error is: " + c[0] + ", " + c[1]);
 
         //Tasksheet 5 # 5 Hybrid - Newton/Bisection method verification
-        ans =root.hybridN(a, b, tol, iters);
-        System.out.println("The hybrid solution using bisection and Newton's method is: " + ans);
+        //ans =root.hybridN(a, b, tol, iters);
+        //System.out.println("The hybrid solution using bisection and Newton's method is: " + ans);
 
-        myTest.erro = root.err;
-        for (int i = 0; i<100; i++)
-            System.out.println(myTest.erro[i]);
+        //myTest.erro = root.err;
+        //for (int i = 0; i<100; i++)
+          //  System.out.println(myTest.erro[i]);
         //myTest.erro = myTest.getErrorLogLog(myTest.erro);
         //for (int j = 0; j<100; j++)
         //System.out.println(myTest.erro[j]);
 
-        c = conv.linreg(myTest.erro, myTest.erro);
-        System.out.println("\nThe linear regression on the newton-bisection error is: " + c[0] + ", " + c[1]);
+        //c = conv.linreg(myTest.erro, myTest.erro);
+        //System.out.println("\nThe linear regression on the newton-bisection error is: " + c[0] + ", " + c[1]);
 
+
+        //Tasksheet 6 # 1
+        //1 - bisection
+        a = -0.4;
+        b = 0.6;
+        ans = root.bisection(a, b, tol, iters);
+        //print out the root
+        System.out.println(ans);
+
+        //1 - secant
+        ans = root.bisection(a, b, tol, iters);
+        //print out the root
+        System.out.println(ans);
+
+        //1 - newton
+        ans = root.newton(6,tol,3);
+        //print out the root
+        System.out.println(ans);
+
+        //1 - hybridN
+        ans = root.hybridN(a,0.5,tol,iters);
+        //print out the root
+        System.out.println(ans);
+
+        //3 - hybrid alter to find the one root prior found
+        a = -5.0;
+        b =  6.0;
+        ans = root.hybridN(a,b,tol, iters);
+        System.out.println(ans);
+
+        ans = root.hybridS(a,b,tol, iters);
+        System.out.println(ans);
+
+        double[] test = new double[10];
+        double[] zero = new double[10];
+        double[] rt = new double[10];
+        test = root.solve(a,b,iters,tol);
+
+        for(int i = 0; i < 10; i++)
+        {
+            zero[i] = root.f2(test[i]);
+            if(zero[i] == 0)
+            {
+                rt[i] = test[i];
+                System.out.println("Roots found are: " + rt[i] );
+            }
+        }
+*/
+
+    //TASKSHEET 7 Task 1
+
+        //initialize RHS to all 1's
+        int n = 3;
+        double[] b = lin.RHSinit(n);
+
+        //initialize Upper Triangle Matrix
+        double[][] A = mat.upperTriangleInit(n);
+
+        //code to verify the matrix initialized correctly
+        /*for (int i = 0; i < n; i++) {
+            System.out.println();
+            for (int j = 0; j < n; j++) {
+                System.out.print(A[i][j] + " ");
+            }
+            System.out.println();
+        }*/
+
+        //solve the system of equations
+        double[] x = lin.GEsolve(A, b);
+
+        //print out the solution
+        for (int i = 0; i < n; i++)
+            System.out.println(x[i] + ",");
+
+    //TASKSHEET 7 Task 2
+        //initialize RHS to all 1's
+        b = lin.RHSinit(n);
+
+        //initialize Lower Triangle Matrix
+        //this returns 1's if lower, and if transposed of upper.
+        A = mat.lowerTriangleInit(n);
+        //A = mat.matrixT(A);
+
+        //code to verify the matrix initialized correctly
+        /*for (int i = 0; i < n; i++) {
+            System.out.println();
+            for (int j = 0; j < n; j++) {
+                System.out.print(A[i][j] + " ");
+            }
+            System.out.println();
+        }*/
+
+        //solve the system of equations
+        x = lin.GEsolve(A, b);
+
+        //print out the solution
+        for (int i = 0; i < n; i++)
+            System.out.println(x[i] + ",");
+
+
+        //TASKSHEET 7 Task 3
+
+
+        //TASKSHEET 7 Task 4
+        A = mat.diagInit(n);
+
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < n; j++)
+            {
+                System.out.print(A[i][j] + ", ");
+            }
+            System.out.println();
+        }
+
+
+        //TASKSHEET 7 Task 5
+        A = mat.Ainit(n);
+        A = lin.rref(A);
+
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < n; j++)
+            {
+                System.out.print(A[i][j] + " ");
+            }
+            System.out.print(", " + x[i]);
+            System.out.println();
+        }
+
+        
     }
 
     //TASKSHEET 2 Task 5 -- code to solve the Taylor Series Expansion for an f(x) with a given h
