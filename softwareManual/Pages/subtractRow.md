@@ -20,7 +20,7 @@ where the method belonds to the class LinearSolvers. These commands should also 
 
 **Description/Purpose:** This routine will perform the swapping rows opperation when performing rref on a square matrix.
 
-**Input:** There are three inputs, the current matrix m, double[][] m, a scalar, double scalar, and the current indexes of the two rows to be subtracted, int subtract_scalar_times_this_row and int from_this_row. 
+**Input:** There are four inputs, the current matrix m, double[][] m, a scalar, double scalar, and the current indexes of the two rows to be subtracted, int subtract_scalar_times_this_row and int from_this_row. 
 
 **Output:** This routine doesn't return anything. It merely updates m with the rows subtracted.
 
