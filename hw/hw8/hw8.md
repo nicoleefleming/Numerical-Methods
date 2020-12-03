@@ -34,6 +34,9 @@ Try scaled partial pivoting against the Hilbert matrix to see if the results are
 ## Task 6
 Search the internet for sites that document the Hilbert metrix of various sizes. Write a brief paragraph (3 or 4 sentences) that describe your findings. Include links to the sites you cite.
 ### Response
-
+The Hilbert Matrix is important in deriving least squares approxiations. They are notoriously difficult to use in numerical computation. They are Symmetric matrices, and Positive and the determinant is positive. I was looking into the Singular-values, as the SVD is a heavily used application in some machine learing applications. More information of the singular values were found in the textbook, Mathematics for Machine Learning (Hilbert spaces are talked about in chapter 3 on page 80). 
 ### Sources
-
+[Hilbert Matrix Wikipedia](https://en.wikipedia.org/wiki/Hilbert_matrix)
+[Geek for Geeks: Hilbert Matrix](https://www.geeksforgeeks.org/hilbert-matrix/)
+[Mathematics for Machine Learning](https://mml-book.github.io/book/mml-book.pdf)
+[singular values of hilbert matrices](https://mathoverflow.net/questions/137059/the-singular-values-of-the-hilbert-matrix)
