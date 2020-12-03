@@ -58,5 +58,8 @@ Compare the results for the Gaussian elimination with backsubstitution to the re
 ## Task 6
  Search the internet for sites that document the use of Jacobi iteration and Gauss-Seidel iteration which is a slight modification of Jacobi iteration. Write a brief paragraph (3 or 4 sentences) that describe your findings. Include links to the sites you cite.
 ### Response
-
+The difference between the Gauss–Seidel and Jacobi methods is that the Jacobi method uses the values obtained from the previous step while the Gauss–Seidel method always applies the latest updated values during the iterative procedures. The Gauss-Seidel method updates on every step, where the Jacobi updates each iteration. This makes the convergence rate better in Gauss-Seidel better than Jacobi.
 ### Sources
+[Gauss-Seidel Method](https://www.sciencedirect.com/topics/engineering/gauss-seidel-method#:~:text=The%20difference%20between%20the%20Gauss,as%20demonstrated%20in%20Table%207.2.)
+[Jacobi Iteration Method](https://www.sciencedirect.com/topics/engineering/jacobi-method)
+[]()
